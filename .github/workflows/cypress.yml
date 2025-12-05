@@ -6,6 +6,11 @@ on:
     - cron: '0 3 1 * *'  # minute hour day-of-month month day-of-week
   workflow_dispatch:  # optional manual trigger
 
+defaults:
+  run:
+    shell: bash
+    working-directory: cypress-setup
+
 jobs:
   a11y-scan:
     runs-on: ubuntu-latest
