@@ -25,19 +25,10 @@ jobs:
       - name: Run accessibility tests
         run: |
           npx cypress run \
-            --config baseUrl=https://staging.myapp.com \
-            --spec "cypress/e2e/a11y.cy.js"
+            --spec "cypress/e2e/dot-checkout-flow.cy.js"
 
       - name: Upload accessibility report
         uses: actions/upload-artifact@v3
         with:
           name: a11y-report
           path: cypress/reports/a11y
-
-
-
-
-
-
-
-
