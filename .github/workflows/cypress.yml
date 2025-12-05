@@ -20,6 +20,8 @@ jobs:
 
       - name: Run accessibility tests
         uses: cypress-io/github-action@v6
+        with:
+          working-directory: cypress-setup
 
       - name: Upload accessibility report
         uses: actions/upload-artifact@v4
